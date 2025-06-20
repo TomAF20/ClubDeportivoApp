@@ -58,4 +58,7 @@ dependencies {
     debugImplementation libs.androidx.ui.tooling
     debugImplementation libs.androidx.ui.test.manifest
     implementation 'com.google.zxing:core:3.5.2'
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.5'
+
+
 }
