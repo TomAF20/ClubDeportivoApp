@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#1B4332"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_conversacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2D6A4F"
+        android:title="Contacto"
+        android:titleTextColor="#FFFFFF"
+        android:navigationIcon="@drawable/ic_arrow_back" /> <!-- ESTA LÍNEA AÑADIDA -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMensajes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etMensaje"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Escribe un mensaje..."
+            android:background="@drawable/campo_texto_blanco"
+            android:padding="10dp"/>
+
+        <ImageButton
+            android:id="@+id/btnEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_send"
+            android:background="@android:color/transparent"
+            android:tint="#FFFFFF" />
+    </LinearLayout>
+</LinearLayout>
