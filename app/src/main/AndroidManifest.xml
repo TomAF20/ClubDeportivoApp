@@ -13,6 +13,26 @@
         android:theme="@style/Theme.ClubDeportivo"
         tools:targetApi="31">
         <activity
+            android:name=".PerfilArbitroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportarProblemaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatArbitroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArbitroActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PartidosAsignadosActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".ReporteActivity"
             android:exported="false" />
         <activity
@@ -20,9 +40,6 @@
             android:exported="false" />
         <activity
             android:name=".PerfilActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ReportesActivity"
             android:exported="false" />
         <activity
             android:name=".ChatActivity"

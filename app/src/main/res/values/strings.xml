@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ClubDeportivo</string>
+
+    <!-- Textos para árbitro -->
+    <string name="titulo_arbitro">HOLA ÁRBITRO</string>
+    <string name="btn_partidos">PARTIDOS ASIGNADOS</string>
+    <string name="btn_chat">CHAT</string>
+    <string name="btn_historial">HISTORIAL</string>
+    <string name="btn_reportar">REPORTAR PROBLEMA ⚠️</string>
+    <string name="btn_perfil">PERFIL Y AJUSTES</string>
 </resources>
