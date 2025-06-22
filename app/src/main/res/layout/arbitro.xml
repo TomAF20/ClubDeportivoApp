@@ -8,13 +8,13 @@
 
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_partidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
         android:background="#2D6A4F"
-        android:title="Árbitro"
-        android:titleTextColor="#FFFFFF"
+        app:title="Árbitro"
+        app:titleTextColor="#FFFFFF"
         android:elevation="4dp" />
 
     <!-- Contenedor scrollable para tarjetas -->

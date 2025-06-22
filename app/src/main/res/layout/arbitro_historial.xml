@@ -1,10 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HistorialActivity">
+    android:background="#1B4332">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_historial"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2D6A4F"
+        app:title="Árbitro"
+        app:titleTextColor="#FFFFFF">
+
+        <ImageButton
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_lock_power_off"
+            app:tint="#B00020"
+            android:contentDescription="Cerrar sesión" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historial de Partidos"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Buscador + botón -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:layout_marginBottom="12dp">
+
+                <EditText
+                    android:id="@+id/etBuscar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:hint="Buscar..."
+                    android:backgroundTint="#FFFFFF"
+                    android:paddingHorizontal="12dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#888888" />
+
+                <Button
+                    android:id="@+id/btnBuscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Buscar"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#004D4D"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+
+            <!-- Tabla simulada -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="#FFFFFF"
+                android:padding="4dp">
+
+                <!-- Encabezado -->
+                <TableRow android:background="#CCCCCC">
+                    <TextView
+                        android:text="Partidos"
+                        android:padding="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:text="Hora Inicio"
+                        android:padding="8dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:text="Hora Fin"
+                        android:padding="8dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Filas de ejemplo -->
+                <TableRow>
+                    <TextView android:text="Equipo A vs B" android:padding="8dp" />
+                    <TextView android:text="16:00" android:padding="8dp" />
+                    <TextView android:text="18:00" android:padding="8dp" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Equipo C vs D" android:padding="8dp" />
+                    <TextView android:text="18:30" android:padding="8dp" />
+                    <TextView android:text="20:30" android:padding="8dp" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#081C15"
+        app:menu="@menu/bottom_nav_menu_arbi"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled" />
+</LinearLayout>

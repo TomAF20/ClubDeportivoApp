@@ -28,7 +28,7 @@ public class ArbitroActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.nav_chat) {
+            if (id == R.id.nav_chat_arbitro) {
                 startActivity(new Intent(this, ChatArbitroActivity.class));
                 overridePendingTransition(0, 0);
                 finish();
@@ -43,7 +43,7 @@ public class ArbitroActivity extends AppCompatActivity {
                 overridePendingTransition(0, 0);
                 finish();
                 return true;
-            } else if (id == R.id.nav_perfil) {
+            } else if (id == R.id.nav_perfil_arbitro) {
                 startActivity(new Intent(this, PerfilArbitroActivity.class));
                 overridePendingTransition(0, 0);
                 finish();
