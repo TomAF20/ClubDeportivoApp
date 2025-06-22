@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_partidos"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Partidos" />
+
+    <item
+        android:id="@+id/nav_chat_arbitro"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="Chat" />
+
+    <item
+        android:id="@+id/nav_historial"
+        android:icon="@android:drawable/ic_menu_report_image"
+        android:title="Historial" />
+
+    <item
+        android:id="@+id/nav_reportar"
+        android:icon="@android:drawable/ic_menu_report_image"
+        android:title="Reportar" />
+
+    <item
+        android:id="@+id/nav_perfil_arbitro"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Perfil" />
+
+</menu>
