@@ -1,16 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ClubDeportivo</string>
-
-    <!-- Textos para árbitro -->
-    <string name="titulo_arbitro">HOLA ÁRBITRO</string>
-    <string name="btn_partidos">PARTIDOS ASIGNADOS</string>
-    <string name="btn_chat">CHAT</string>
-    <string name="btn_historial">HISTORIAL</string>
-    <string name="btn_reportar">REPORTAR PROBLEMA ⚠️</string>
-    <string name="btn_perfil">PERFIL Y AJUSTES</string>
-    <string name="icono_cancha">icono cancha</string>
-
-
     <string-array name="tipos_incidencia">
         <item>Seleccionar Tipo de Incidencia</item>
         <item>Servicios</item>
@@ -19,7 +8,4 @@
         <item>Otro</item>
     </string-array>
 
-
 </resources>
-
-

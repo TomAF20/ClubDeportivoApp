@@ -2,6 +2,7 @@ package com.example.clubdeportivo;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -13,6 +14,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ReportarProblemaActivity extends AppCompatActivity {
+
+    private Spinner spinner;
+    private Button btnReportar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,19 +30,28 @@ public class ReportarProblemaActivity extends AppCompatActivity {
             return insets;
         });
 
-        // 🟢 Validar selección del Spinner
-        Spinner spinner = findViewById(R.id.spinnerTipoIncidencia);
-        Button btnReportar = findViewById(R.id.btnReportar);
+        // 🔹 Referencias UI
+        spinner = findViewById(R.id.spinnerTipoIncidencia);
+        btnReportar = findViewById(R.id.btnReportar);
 
+        // 🔹 Cargar el Spinner con el array desde strings.xml
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.tipos_incidencia,
+                android.R.layout.simple_spinner_item
+        );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        // 🔹 Acción del botón
         btnReportar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String seleccion = spinner.getSelectedItem().toString();
 
                 if (seleccion.equals("Seleccionar Tipo de Incidencia")) {
-                    Toast.makeText(ReportarProblemaActivity.this, "Por favor selecciona un tipo de incidencia válido", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ReportarProblemaActivity.this, "Por favor selecciona un tipo válido", Toast.LENGTH_SHORT).show();
                 } else {
-                    // Aquí iría tu lógica para registrar el reporte
                     Toast.makeText(ReportarProblemaActivity.this, "Reporte enviado: " + seleccion, Toast.LENGTH_SHORT).show();
                 }
             }

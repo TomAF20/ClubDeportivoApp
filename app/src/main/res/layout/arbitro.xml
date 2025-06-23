@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
         android:background="#2D6A4F"
-        app:title="Árbitro"
+        app:title="Partidos Asignados"
         app:titleTextColor="#FFFFFF"
         android:elevation="4dp" />
 

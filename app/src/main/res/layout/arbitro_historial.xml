@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#2D6A4F"
-        app:title="Árbitro"
+        app:title="Historial"
         app:titleTextColor="#FFFFFF">
 
         <ImageButton
@@ -44,7 +44,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Historial de Partidos"
+                android:text="Listado de Partidos"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
