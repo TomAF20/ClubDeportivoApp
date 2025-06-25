@@ -1,7 +1,10 @@
 package com.example.clubdeportivo;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,6 +37,24 @@ public class InicioAdminActivity extends AppCompatActivity {
                 0xFFE91E63  // Domingo - Rosa
         };
         barChartView.setData(ingresosDiarios, labelsDiarios, colors);
+
+        Button btnEmplea = findViewById(R.id.btn_empleados);
+        btnEmplea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InicioAdminActivity.this, AdminEmpleaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnIngresos = findViewById(R.id.btn_ingresos);
+        btnIngresos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InicioAdminActivity.this, IngresosActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

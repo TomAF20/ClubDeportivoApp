@@ -9,4 +9,9 @@
     <string name="btn_reportar">REPORTAR PROBLEMA ⚠️</string>
     <string name="btn_perfil">PERFIL Y AJUSTES</string>
     <string name="icono_cancha">icono cancha</string>
+    <string name="ingresos">Ingresos</string>
+    <string name="informes">Informes</string>
+    <string name="salir">Salir</string>
+    <string name="empleados">Empleados</string>
+    <string name="canchas">Canchas</string>
 </resources>

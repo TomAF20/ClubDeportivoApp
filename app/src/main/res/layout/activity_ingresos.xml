@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_ingresos.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F8F9FA"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CONTENIDO SCROLLEABLE -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Título -->
+            <TextView
+                android:text="Ingresos"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- TOTAL DE INGRESOS -->
+            <TextView
+                android:id="@+id/text_total_ingresos"
+                android:text="Total: S/. 0.00"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- LISTA DE INGRESOS -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_ingresos"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="8dp" />
+
+            <!-- GRÁFICO DE BARRAS: Ingresos por Mes -->
+            <TextView
+                android:text="Ingresos por Mes"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart_ingresos"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <!-- GRÁFICO DE PASTEL: Ingresos por Categoría -->
+            <TextView
+                android:text="Ingresos por Categoría"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pie_chart_ingresos"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BARRA DE NAVEGACIÓN INFERIOR FIJA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#BDC4E9"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:elevation="4dp">
+
+        <Button
+            android:id="@+id/btn_canchas"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Canchas"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btn_empleados"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Empleados"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <ImageButton
+            android:id="@+id/btn_salir"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_circle_button"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Salir"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:padding="13dp"
+            android:scaleType="centerInside"
+            app:tint="#4B2C84" />
+
+        <Button
+            android:id="@+id/btn_ingresos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Ingresos"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btn_informes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Informes"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

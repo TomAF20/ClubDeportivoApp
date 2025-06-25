@@ -74,9 +74,10 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
-        <activity
-            android:name=".Registro"
-            android:exported="false" />
+
+        <activity android:name=".IngresosActivity"
+            android:exported="false"/>
+
         <activity
             android:name=".InicioActivity"
             android:exported="true">
