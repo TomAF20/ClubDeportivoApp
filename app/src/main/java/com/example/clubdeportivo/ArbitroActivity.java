@@ -17,7 +17,7 @@ public class ArbitroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.arbitro);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar_partidos);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Árbitro");
