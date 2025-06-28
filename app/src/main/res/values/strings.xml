@@ -8,4 +8,9 @@
         <item>Otro</item>
     </string-array>
 
+    <string name="icono_cancha">🏟️</string>
+    <string name="icono_chat">💬</string>
+    <string name="icono_usuario">👤</string>
+    <string name="icono_reporte">📋</string>
+
 </resources>
