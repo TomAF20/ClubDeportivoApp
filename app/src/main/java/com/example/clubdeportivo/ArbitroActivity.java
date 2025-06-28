@@ -33,12 +33,12 @@ public class ArbitroActivity extends AppCompatActivity {
                 overridePendingTransition(0, 0);
                 finish();
                 return true;
-            } else if (id == R.id.nav_historial) {
+            } else if (id == R.id.nav_historial_arbitro) {
                 startActivity(new Intent(this, HistorialActivity.class));
                 overridePendingTransition(0, 0);
                 finish();
                 return true;
-            } else if (id == R.id.nav_reportar) {
+            } else if (id == R.id.nav_reportar_arbitro) {
                 startActivity(new Intent(this, ReportarProblemaActivity.class));
                 overridePendingTransition(0, 0);
                 finish();
