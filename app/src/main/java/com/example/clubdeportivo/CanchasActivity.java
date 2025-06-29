@@ -2,11 +2,8 @@ package com.example.clubdeportivo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -21,10 +18,6 @@ public class CanchasActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Canchas");
-            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        }
 
         Button btnReservar1 = findViewById(R.id.btnReservar1);
         Button btnReservar2 = findViewById(R.id.btnReservar2);

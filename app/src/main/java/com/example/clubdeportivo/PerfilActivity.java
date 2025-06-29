@@ -101,6 +101,11 @@ public class PerfilActivity extends AppCompatActivity {
                 overridePendingTransition(0, 0);
                 finish();
                 return true;
+            } else if (id == R.id.nav_feedback) {
+                startActivity(new Intent(this, ReporteActivity.class));
+                overridePendingTransition(0, 0);
+                finish();
+                return true;
             } else if (id == R.id.nav_perfil) {
                 return true;
             }

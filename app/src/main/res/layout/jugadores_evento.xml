@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B4332">
+    android:background="#0B0F0E">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="NOMBRE DEL EQUIPO"
-                android:textColor="#FFFFFF"
+                android:textColor="#1DB954"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginBottom="8dp" />
@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="JUGADORES"
-                android:textColor="#FFFFFF"
+                android:textColor="#1DB954"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginTop="24dp"
@@ -147,7 +147,7 @@
         android:paddingHorizontal="36dp"
         android:paddingVertical="14dp"
         android:text="SIGUIENTE"
-        android:background="@drawable/btn_iniciar_sesion"
+        android:background="@drawable/btn_siguiente_reservar"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:textAllCaps="true"

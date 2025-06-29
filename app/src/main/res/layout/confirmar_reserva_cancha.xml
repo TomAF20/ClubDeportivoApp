@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B4332">
+    android:background="#0B0F0E">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:text="INFORMACIÓN ADICIONAL"
                 android:textAllCaps="true"
-                android:textColor="#FFFFFF"
+                android:textColor="#1DB954"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:layout_marginTop="8dp"
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="COSTOS ADICIONALES (EQUIPO DEPORTIVO)"
                 android:textAllCaps="true"
-                android:textColor="#FFFFFF"
+                android:textColor="#1DB954"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
 
@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:text="MODALIDAD DE PAGO"
                 android:textAllCaps="true"
-                android:textColor="#FFFFFF"
+                android:textColor="#1DB954"
                 android:textStyle="bold"
                 android:layout_marginBottom="4dp" />
 
@@ -153,7 +153,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/btn_iniciar_sesion"
+        android:background="@drawable/btn_siguiente_reservar"
         android:paddingHorizontal="36dp"
         android:paddingVertical="14dp"
         android:text="RESERVAR"

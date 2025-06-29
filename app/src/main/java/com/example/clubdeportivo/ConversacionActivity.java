@@ -20,15 +20,10 @@ public class ConversacionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_conversacion);
-
         Toolbar toolbar = findViewById(R.id.toolbar_conversacion);
         setSupportActionBar(toolbar);
 
         String nombre = getIntent().getStringExtra("nombre");
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(nombre != null ? nombre : "Chat");
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
 
         toolbar.setNavigationOnClickListener(v -> finish());
 

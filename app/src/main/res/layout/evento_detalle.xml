@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#1B4332">
+    android:background="#0B0F0E">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_evento_detalle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
-        android:background="#2D6A4F"
+        android:background="#1A1F1D"
         android:title="Detalle del Evento"
         android:titleTextColor="#FFFFFF"
         android:elevation="4dp"
@@ -76,7 +76,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Premios"
-                    android:textColor="#B7E4C7"
+                    android:textColor="#1DB954"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:paddingBottom="8dp" />
@@ -115,6 +115,6 @@
         android:text="INSCRIBIR EQUIPO"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:background="@drawable/btn_registrarse"
+        android:background="@drawable/btn_siguiente_reservar"
         android:layout_margin="16dp" />
 </LinearLayout>
