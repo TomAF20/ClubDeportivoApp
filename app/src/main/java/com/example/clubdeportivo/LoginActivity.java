@@ -34,7 +34,17 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, CanchasActivity.class);
                     startActivity(intent);
                     finish();
-                } else {
+                } else if (usuario.equals("eimy") && password.equals("789")) {
+                    Intent intent = new Intent(LoginActivity.this, InicioAdminActivity.class);
+                    startActivity(intent);
+                    finish();
+
+                } else if (usuario.equals("yair") && password.equals("456")) {
+                    Intent intent = new Intent(LoginActivity.this, ArbitroActivity.class);
+                    startActivity(intent);
+                    finish();}
+
+                else {
                     Toast.makeText(LoginActivity.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
                 }
             }

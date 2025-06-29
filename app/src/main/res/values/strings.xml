@@ -1,3 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ClubDeportivo</string>
+    <string-array name="tipos_incidencia">
+        <item>Seleccionar Tipo de Incidencia</item>
+        <item>Servicios</item>
+        <item>Organización</item>
+        <item>Seguridad</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string name="icono_cancha">🏟️</string>
+    <string name="icono_chat">💬</string>
+    <string name="icono_usuario">👤</string>
+    <string name="icono_reporte">📋</string>
+    <string name="app_name">Club Deportivo</string>
 </resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B4332">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_perfil_arbitro"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2D6A4F"
+        app:title="Perfil"
+        app:titleTextColor="#FFFFFF">
+
+        <ImageButton
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_lock_power_off"
+            app:tint="#B00020"
+            android:contentDescription="Cerrar sesión" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/imgPerfil"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/icono_user"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/btnElegirAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elegir avatar"
+                android:textColor="#A5D6A7"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nombres" android:textColor="#FFFFFF"/>
+            <EditText android:id="@+id/etNombres" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="Tom" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Apellido Paterno" android:textColor="#FFFFFF"/>
+            <EditText android:id="@+id/etApellidoPaterno" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="A" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Apellido Materno" android:textColor="#FFFFFF"/>
+            <EditText android:id="@+id/etApellidoMaterno" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="F" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Fecha de Nacimiento" android:textColor="#FFFFFF"/>
+            <EditText android:id="@+id/etFechaNacimiento" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="2000-01-01" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DNI" android:textColor="#FFFFFF"/>
+            <EditText android:id="@+id/etDni" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="77777777" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Celular" android:textColor="#FFFFFF"/>
+            <EditText android:id="@+id/etCelular" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="999999999" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Correo" android:textColor="#FFFFFF"/>
+            <EditText android:id="@+id/etCorreo" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="tom@peru.pe" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
+
+            <Button
+                android:id="@+id/btnEditar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:text="EDITAR"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_registrarse" />
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:text="GUARDAR"
+                android:textColor="#FFFFFF"
+                android:visibility="gone"
+                android:background="@drawable/btn_iniciar_sesion" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="QR del Socio"
+                android:textColor="#A5D6A7"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/qrImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#081C15"
+        app:menu="@menu/bottom_nav_menu_arbi"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled" />
+</LinearLayout>
