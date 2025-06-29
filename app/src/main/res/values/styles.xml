@@ -9,4 +9,15 @@
         <item name="android:padding">12dp</item>
         <item name="android:textAllCaps">false</item>
     </style>
+
+    <style name="BarraBoton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#4B2C84</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:padding">8dp</item>
+    </style>
 </resources>

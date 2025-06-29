@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -55,6 +56,19 @@ public class InicioAdminActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageButton btnAdios = findViewById(R.id.btn_adios);
+        btnAdios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InicioAdminActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
 
 
     }

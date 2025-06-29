@@ -78,6 +78,13 @@
         <activity android:name=".IngresosActivity"
             android:exported="false"/>
 
+        <activity android:name=".AdminEmpleaActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".InicioActivity"
             android:exported="true">

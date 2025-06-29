@@ -1,11 +1,10 @@
 package com.example.clubdeportivo;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -20,8 +19,8 @@ public class EmpleadoAdapter extends RecyclerView.Adapter<EmpleadoAdapter.Emplea
 
     @Override
     public EmpleadoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        @SuppressLint("ResourceType") View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.id.item_empleado, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_empleado, parent, false);
         return new EmpleadoViewHolder(itemView);
     }
 
