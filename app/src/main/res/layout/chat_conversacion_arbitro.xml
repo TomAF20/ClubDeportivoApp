@@ -41,6 +41,6 @@
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_send"
             android:background="@android:color/transparent"
-            android:tint="#FFFFFF" />
+            android:tint="#FFFFFF"/>
     </LinearLayout>
 </LinearLayout>
