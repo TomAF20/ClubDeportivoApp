@@ -1,10 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReportarProblemaActivity">
+    android:background="#1B4332">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_reportes"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2D6A4F"
+        app:title="Reportes"
+        app:titleTextColor="#FFFFFF"
+        android:elevation="4dp">
+
+
+        <ImageButton
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_lock_power_off"
+            app:tint="#B00020"
+            android:contentDescription="Cerrar sesión" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- INSERTAR CODIGO AQUI -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reportar un problema"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Spinner -->
+            <Spinner
+                android:id="@+id/spinnerTipoIncidencia"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:entries="@array/tipos_incidencia"
+                android:background="@drawable/spinner_white_background"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- EditText multilinea -->
+            <EditText
+                android:id="@+id/etReporte"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Indicar reporte..."
+                android:background="@android:color/white"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Botón reportar -->
+            <Button
+                android:id="@+id/btnReportar"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Reportar"
+                android:backgroundTint="#004D4D"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="24dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Tabla de reportes -->
+            <TableLayout
+                android:id="@+id/tableLayoutReportes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0,1"
+                android:background="#FFFFFF"
+                android:padding="4dp">
+
+                <TableRow android:background="#CCCCCC">
+                    <TextView android:text="Reporte" android:padding="8dp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:text="Tipo" android:padding="8dp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:text="Estado" android:padding="8dp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:text="Eliminar" android:padding="8dp" android:textStyle="bold" android:gravity="center"/>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#081C15"
+        app:menu="@menu/bottom_nav_menu_arbi"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled" />
+</LinearLayout>

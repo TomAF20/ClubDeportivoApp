@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ArbitroActivity extends AppCompatActivity {
 
@@ -14,16 +17,41 @@ public class ArbitroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.arbitro);
 
-        Button btnPartidos = findViewById(R.id.btnPartidos);
-        Button btnChat = findViewById(R.id.btnChat);
-        Button btnHistorial = findViewById(R.id.btnHistorial);
-        Button btnReportar = findViewById(R.id.btnReportar);
-        Button btnPerfil = findViewById(R.id.btnPerfil);
+        Toolbar toolbar = findViewById(R.id.toolbar_partidos);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Árbitro");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        }
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.nav_partidos);
 
-        btnPartidos.setOnClickListener(v -> startActivity(new Intent(this, PartidosAsignadosActivity.class)));
-        btnChat.setOnClickListener(v -> startActivity(new Intent(this, ChatArbitroActivity.class)));
-        btnHistorial.setOnClickListener(v -> startActivity(new Intent(this, HistorialActivity.class)));
-        btnReportar.setOnClickListener(v -> startActivity(new Intent(this, ReportarProblemaActivity.class)));
-        btnPerfil.setOnClickListener(v -> startActivity(new Intent(this, PerfilArbitroActivity.class)));
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_chat_arbitro) {
+                startActivity(new Intent(this, ChatArbitroActivity.class));
+                overridePendingTransition(0, 0);
+                finish();
+                return true;
+            } else if (id == R.id.nav_historial_arbitro) {
+                startActivity(new Intent(this, HistorialActivity.class));
+                overridePendingTransition(0, 0);
+                finish();
+                return true;
+            } else if (id == R.id.nav_reportar_arbitro) {
+                startActivity(new Intent(this, ReportarProblemaActivity.class));
+                overridePendingTransition(0, 0);
+                finish();
+                return true;
+            } else if (id == R.id.nav_perfil_arbitro) {
+                startActivity(new Intent(this, PerfilArbitroActivity.class));
+                overridePendingTransition(0, 0);
+                finish();
+                return true;
+            }
+            return id == R.id.nav_partidos;
+        });
+
+
     }
 }

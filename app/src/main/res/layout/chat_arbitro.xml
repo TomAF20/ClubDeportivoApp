@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatArbitroActivity">
+    android:background="#1B4332">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_partidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2D6A4F"
+        android:title="Chat"
+        android:titleTextColor="#FFFFFF"
+        android:elevation="4dp" />
+
+    <EditText
+        android:id="@+id/search_chat_arbitro"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/campo_texto_blanco"
+        android:hint="Buscar contactos..."
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textColorHint="#777777" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChatsArbitro"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:contentDescription="Lista de conversaciones" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#081C15"
+        app:menu="@menu/bottom_nav_menu_arbi"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled" />
+</LinearLayout>
