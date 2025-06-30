@@ -12,8 +12,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_reportes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
         android:background="#2D6A4F"
         app:title="Reportes"
         app:titleTextColor="#FFFFFF"

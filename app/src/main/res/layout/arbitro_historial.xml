@@ -81,8 +81,8 @@
             </LinearLayout>
 
 
-            <!-- Tabla simulada -->
             <TableLayout
+                android:id="@+id/tableLayoutPartidos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:stretchColumns="*"
@@ -104,21 +104,8 @@
                         android:padding="8dp"
                         android:textStyle="bold" />
                 </TableRow>
-
-                <!-- Filas de ejemplo -->
-                <TableRow>
-                    <TextView android:text="Equipo A vs B" android:padding="8dp" />
-                    <TextView android:text="16:00" android:padding="8dp" />
-                    <TextView android:text="18:00" android:padding="8dp" />
-                </TableRow>
-
-                <TableRow>
-                    <TextView android:text="Equipo C vs D" android:padding="8dp" />
-                    <TextView android:text="18:30" android:padding="8dp" />
-                    <TextView android:text="20:30" android:padding="8dp" />
-                </TableRow>
-
             </TableLayout>
+
         </LinearLayout>
     </ScrollView>
 
