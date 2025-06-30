@@ -13,4 +13,7 @@
     <string name="icono_usuario">👤</string>
     <string name="icono_reporte">📋</string>
 
+    <string name="adios">Cerrar sesión</string>
+
+
 </resources>
