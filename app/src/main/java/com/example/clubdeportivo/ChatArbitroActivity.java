@@ -17,8 +17,8 @@ public class ChatArbitroActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private EditText etBuscar;
-    private ChatListAdapter adapter;
-    private List<ChatItem> listaChats;
+    private ChatArbitroListAdapter adapter;
+    private List<ChatItemArbitro> listaChats;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +31,17 @@ public class ChatArbitroActivity extends AppCompatActivity {
         }
 
 
-        recyclerView = findViewById(R.id.recyclerChats);
-        etBuscar = findViewById(R.id.search_chat); // CORREGIDO
+        recyclerView = findViewById(R.id.recyclerChatsArbitro);
+        etBuscar = findViewById(R.id.search_chat_arbitro); // CORREGIDO
 
         listaChats = new ArrayList<>();
-        listaChats.add(new ChatItem("Carlos", "Hola, ¿cómo estás?"));
-        listaChats.add(new ChatItem("María", "Nos vemos mañana"));
-        listaChats.add(new ChatItem("IA Asistente", "Haz clic para chatear"));
+        listaChats.add(new ChatItemArbitro("Carlos", "Hola, ¿cómo estás?"));
+        listaChats.add(new ChatItemArbitro("María", "Nos vemos mañana"));
+        listaChats.add(new ChatItemArbitro("IA Asistente", "Haz clic para chatear"));
 
-        adapter = new ChatListAdapter(listaChats, chatItem -> {
+        adapter = new ChatArbitroListAdapter(listaChats, chatItemArbitro -> {
             Intent intent = new Intent(ChatArbitroActivity.this, ConversacionArbitroActivity.class);
-            intent.putExtra("nombre", chatItem.getNombre());
+            intent.putExtra("nombre", chatItemArbitro.getNombre());
             startActivity(intent);
         });
 

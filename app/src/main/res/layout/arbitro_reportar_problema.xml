@@ -87,9 +87,10 @@
 
             <!-- Tabla de reportes -->
             <TableLayout
+                android:id="@+id/tableLayoutReportes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:stretchColumns="*"
+                android:stretchColumns="0,1"
                 android:background="#FFFFFF"
                 android:padding="4dp">
 
@@ -97,19 +98,7 @@
                     <TextView android:text="Reporte" android:padding="8dp" android:textStyle="bold"/>
                     <TextView android:text="Tipo" android:padding="8dp" android:textStyle="bold"/>
                     <TextView android:text="Estado" android:padding="8dp" android:textStyle="bold"/>
-                </TableRow>
-
-                <!-- Filas de ejemplo -->
-                <TableRow>
-                    <TextView android:text="Falta de agua" android:padding="8dp"/>
-                    <TextView android:text="Servicios" android:padding="8dp"/>
-                    <TextView android:text="Pendiente" android:padding="8dp"/>
-                </TableRow>
-
-                <TableRow>
-                    <TextView android:text="Sin árbitro" android:padding="8dp"/>
-                    <TextView android:text="Organización" android:padding="8dp"/>
-                    <TextView android:text="Resuelto" android:padding="8dp"/>
+                    <TextView android:text="Eliminar" android:padding="8dp" android:textStyle="bold"/>
                 </TableRow>
 
             </TableLayout>

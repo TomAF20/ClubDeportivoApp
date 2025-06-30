@@ -11,15 +11,15 @@ import java.util.List;
 
 public class ChatArbitroListAdapter extends RecyclerView.Adapter<ChatArbitroListAdapter.ChatViewHolder> {
 
-    private List<ChatItem> listaOriginal;
-    private List<ChatItem> listaFiltrada;
+    private List<ChatItemArbitro> listaOriginal;
+    private List<ChatItemArbitro> listaFiltrada;
     private final OnChatClickListener listener;
 
     public interface OnChatClickListener {
-        void onChatClick(ChatItem chatItem);
+        void onChatClick(ChatItemArbitro chatItemArbitro);
     }
 
-    public ChatArbitroListAdapter(List<ChatItem> listaChats, OnChatClickListener listener) {
+    public ChatArbitroListAdapter(List<ChatItemArbitro> listaChats, OnChatClickListener listener) {
         this.listaOriginal = new ArrayList<>(listaChats);
         this.listaFiltrada = new ArrayList<>(listaChats);
         this.listener = listener;
@@ -30,7 +30,7 @@ public class ChatArbitroListAdapter extends RecyclerView.Adapter<ChatArbitroList
         if (texto.isEmpty()) {
             listaFiltrada.addAll(listaOriginal);
         } else {
-            for (ChatItem item : listaOriginal) {
+            for (ChatItemArbitro item : listaOriginal) {
                 if (item.getNombre().toLowerCase().contains(texto.toLowerCase())) {
                     listaFiltrada.add(item);
                 }
@@ -43,13 +43,13 @@ public class ChatArbitroListAdapter extends RecyclerView.Adapter<ChatArbitroList
     @Override
     public ChatViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_chat, parent, false);
+                .inflate(R.layout.item_chat_arbitro, parent, false);
         return new ChatViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ChatViewHolder holder, int position) {
-        ChatItem item = listaFiltrada.get(position);
+        ChatItemArbitro item = listaFiltrada.get(position);
         holder.txtNombre.setText(item.getNombre());
         holder.txtUltimoMensaje.setText(item.getUltimoMensaje());
         holder.itemView.setOnClickListener(v -> listener.onChatClick(item));
