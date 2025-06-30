@@ -40,10 +40,16 @@ public class LoginActivity extends AppCompatActivity {
                     finish();
 
 
-            } else if (usuario.equals("doc") && password.equals("1234")) {
-                Intent intent = new Intent(LoginActivity.this, RegistroMedicoActivity.class);
-                startActivity(intent);
-                finish();
+                }else if (usuario.equals("yair") && password.equals("1234")) {
+                    Intent intent = new Intent(LoginActivity.this, ArbitroActivity.class);
+                    startActivity(intent);
+                    finish();
+
+
+                }else if (usuario.equals("doc") && password.equals("1234")) {
+                    Intent intent = new Intent(LoginActivity.this, RegistroMedicoActivity.class);
+                    startActivity(intent);
+                    finish();
 
             }
                 else {

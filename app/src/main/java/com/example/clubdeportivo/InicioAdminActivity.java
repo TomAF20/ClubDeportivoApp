@@ -66,10 +66,5 @@ public class InicioAdminActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
     }
 }
