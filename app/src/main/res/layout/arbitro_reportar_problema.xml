@@ -12,10 +12,13 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_reportes"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
         android:background="#2D6A4F"
         app:title="Reportes"
-        app:titleTextColor="#FFFFFF">
+        app:titleTextColor="#FFFFFF"
+        android:elevation="4dp">
+
 
         <ImageButton
             android:id="@+id/btnCerrarSesion"
@@ -95,10 +98,10 @@
                 android:padding="4dp">
 
                 <TableRow android:background="#CCCCCC">
-                    <TextView android:text="Reporte" android:padding="8dp" android:textStyle="bold"/>
-                    <TextView android:text="Tipo" android:padding="8dp" android:textStyle="bold"/>
-                    <TextView android:text="Estado" android:padding="8dp" android:textStyle="bold"/>
-                    <TextView android:text="Eliminar" android:padding="8dp" android:textStyle="bold"/>
+                    <TextView android:text="Reporte" android:padding="8dp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:text="Tipo" android:padding="8dp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:text="Estado" android:padding="8dp" android:textStyle="bold" android:gravity="center"/>
+                    <TextView android:text="Eliminar" android:padding="8dp" android:textStyle="bold" android:gravity="center"/>
                 </TableRow>
 
             </TableLayout>

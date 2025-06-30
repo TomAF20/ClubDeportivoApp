@@ -82,7 +82,7 @@ public class ReportarProblemaActivity extends AppCompatActivity {
                 overridePendingTransition(0, 0);
                 finish();
                 return true;
-            } else if (id == R.id.nav_canchas) {
+            } else if (id == R.id.nav_partidos) {
                 startActivity(new Intent(this, ArbitroActivity.class));
                 overridePendingTransition(0, 0);
                 finish();
