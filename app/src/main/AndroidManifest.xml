@@ -102,6 +102,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".RegistroMedicoActivity" />
+        <activity android:name=".ResumenRegistroActivity" />
+        <activity android:name=".PerfilMedActivity" />
     </application>
 
 </manifest>

@@ -1,7 +1,11 @@
 package com.example.clubdeportivo;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,7 +43,45 @@ public class IngresosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingresos);
 
-        // Referencias
+
+        Button btnCanchas = findViewById(R.id.btn_canchas);
+        btnCanchas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IngresosActivity.this, InicioAdminActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnEmplea = findViewById(R.id.btn_empleados);
+        btnEmplea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IngresosActivity.this, AdminEmpleaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnIngresos = findViewById(R.id.btn_ingresos);
+        btnIngresos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IngresosActivity.this, IngresosActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton btnAdios = findViewById(R.id.btn_salir);
+        btnAdios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IngresosActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         recyclerIngresos = findViewById(R.id.recycler_ingresos);
         textTotal = findViewById(R.id.text_total_ingresos);
         barChart = findViewById(R.id.bar_chart_ingresos);
@@ -69,18 +111,15 @@ public class IngresosActivity extends AppCompatActivity {
     }
 
     private void mostrarGraficoBarras() {
-        // 1️⃣ Crear mapa de ingresos por mes
         HashMap<String, Double> ingresosPorMes = new HashMap<>();
         for (Ingreso ingreso : ingresos) {
             String mes = ingreso.getFecha().substring(5, 7);
             ingresosPorMes.put(mes, ingresosPorMes.getOrDefault(mes, 0.0) + ingreso.getImporte());
         }
 
-        // 2️⃣ Definir primeros 6 meses
         String[] primerosSeisMeses = {"01", "02", "03", "04", "05", "06"};
         ArrayList<BarEntry> entries = new ArrayList<>();
 
-        // 3️⃣ Crear entradas para los primeros 6 meses
         for (int i = 0; i < primerosSeisMeses.length; i++) {
             String mes = primerosSeisMeses[i];
             float valor = ingresosPorMes.containsKey(mes)
@@ -89,19 +128,15 @@ public class IngresosActivity extends AppCompatActivity {
             entries.add(new BarEntry(i + 1, valor));
         }
 
-        // 4️⃣ Crear dataset
         BarDataSet dataSet = new BarDataSet(entries, "Ingresos por Mes");
         dataSet.setColor(getResources().getColor(android.R.color.holo_blue_light));
 
-        // 5️⃣ Asignar al gráfico
         BarData barData = new BarData(dataSet);
         barChart.setData(barData);
         barChart.getDescription().setText("Ingresos por Mes (Ene-Jun)");
 
-        // Opcional: Para que la barra ocupe menos espacio
         barData.setBarWidth(0.5f);
 
-        // 6️⃣ Refrescar gráfico
         barChart.invalidate();
     }
 

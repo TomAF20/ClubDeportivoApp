@@ -1,6 +1,10 @@
 package com.example.clubdeportivo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,5 +29,43 @@ public class AdminEmpleaActivity extends AppCompatActivity {
 
         EmpleadoAdapter adapter = new EmpleadoAdapter(empleados);
         recyclerView.setAdapter(adapter);
+
+        Button btnCanchas = findViewById(R.id.btn_canchas);
+        btnCanchas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminEmpleaActivity.this, InicioAdminActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnEmplea = findViewById(R.id.btn_empleados);
+        btnEmplea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminEmpleaActivity.this, AdminEmpleaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btnIngresos = findViewById(R.id.btn_ingresos);
+        btnIngresos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminEmpleaActivity.this, IngresosActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton btnAdios = findViewById(R.id.btn_adios);
+        btnAdios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminEmpleaActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
