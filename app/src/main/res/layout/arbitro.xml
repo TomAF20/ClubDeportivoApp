@@ -258,7 +258,7 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#1B4332"
+        android:background="#081C15"
         app:labelVisibilityMode="labeled"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1B4332">
@@ -12,11 +13,11 @@
         android:id="@+id/toolbar_reportes"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_alignParentTop="true"
         android:background="#2D6A4F"
         app:title="Reportes"
         app:titleTextColor="#FFFFFF"
         android:elevation="4dp">
+
 
         <ImageButton
             android:id="@+id/btnCerrarSesion"
@@ -29,13 +30,11 @@
             android:contentDescription="Cerrar sesión" />
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- Contenido scrollable -->
+    <!-- INSERTAR CODIGO AQUI -->
     <ScrollView
-        android:id="@+id/scrollViewContent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation"
-        android:layout_below="@id/toolbar_reportes"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:padding="16dp">
 
         <LinearLayout
@@ -108,15 +107,14 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation fijo -->
+    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:background="#081C15"
-        app:menu="@menu/bottom_nav_menu_arbi"
+        app:labelVisibilityMode="labeled"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
-        app:labelVisibilityMode="labeled" />
-</RelativeLayout>
+        app:menu="@menu/bottom_nav_menu_arbi" />
+</LinearLayout>

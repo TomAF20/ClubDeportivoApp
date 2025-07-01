@@ -57,12 +57,12 @@ public class ChatArbitroActivity extends AppCompatActivity {
         });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.nav_partidos);
+        bottomNavigationView.setSelectedItemId(R.id.nav_chat_arbitro);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.nav_chat_arbitro) {
-                startActivity(new Intent(this, ChatArbitroActivity.class));
+            if (id == R.id.nav_partidos) {
+                startActivity(new Intent(this, ArbitroActivity.class));
                 overridePendingTransition(0, 0);
                 finish();
                 return true;
@@ -82,7 +82,7 @@ public class ChatArbitroActivity extends AppCompatActivity {
                 finish();
                 return true;
             }
-            return id == R.id.nav_partidos;
+            return id == R.id.nav_chat_arbitro;
         });
     }
 }
