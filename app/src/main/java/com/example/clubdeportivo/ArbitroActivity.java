@@ -52,6 +52,11 @@ public class ArbitroActivity extends AppCompatActivity {
             return id == R.id.nav_partidos;
         });
 
+        Button verMasBtn = findViewById(R.id.btn_ver_mas_partido1);
+        verMasBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(ArbitroActivity.this, DetallesPartidoActivity.class);
+            startActivity(intent);
+        });
 
     }
 }
