@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ClubDeportivo"
         tools:targetApi="31">
         <activity
+            android:name=".DetallesPartidoActivity"
+            android:exported="false" />
+        <activity
             android:name=".PerfilArbitroActivity"
             android:exported="false" />
         <activity
@@ -27,11 +30,9 @@
         <activity
             android:name=".ArbitroActivity"
             android:exported="false" />
-
         <activity
             android:name=".PartidosAsignadosActivity"
             android:exported="false" />
-
         <activity
             android:name=".ReporteActivity"
             android:exported="false" />
@@ -74,17 +75,16 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
-
-        <activity android:name=".IngresosActivity"
-            android:exported="false"/>
-
-        <activity android:name=".AdminEmpleaActivity"
+        <activity
+            android:name=".IngresosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminEmpleaActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".InicioActivity"
             android:exported="true">
@@ -94,12 +94,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".InicioAdminActivity"
+        <activity
+            android:name=".InicioAdminActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".RegistroMedicoActivity" />
