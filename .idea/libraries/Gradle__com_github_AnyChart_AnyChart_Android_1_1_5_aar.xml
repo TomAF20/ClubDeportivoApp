@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.AnyChart:AnyChart-Android:1.1.5@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/8.13/transforms/0711a71408312f1d30f199e1b04507e0/transformed/AnyChart-Android-1.1.5/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/8.13/transforms/0711a71408312f1d30f199e1b04507e0/transformed/AnyChart-Android-1.1.5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/8.13/transforms/0711a71408312f1d30f199e1b04507e0/transformed/AnyChart-Android-1.1.5/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.13/transforms/946f2ee3f8580aea4581a80f7433351f/transformed/AnyChart-Android-1.1.5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/8.13/transforms/946f2ee3f8580aea4581a80f7433351f/transformed/AnyChart-Android-1.1.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/8.13/transforms/946f2ee3f8580aea4581a80f7433351f/transformed/AnyChart-Android-1.1.5/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.AnyChart/AnyChart-Android/1.1.5/54d2da0ad5e99938d8b0250e829f09c18a79e2a1/AnyChart-Android-1.1.5-javadoc.jar!/" />
