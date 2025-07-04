@@ -5,67 +5,58 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class AdminEmpleaActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private UsuarioAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_empleados);
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        List<Empleado> empleados = new ArrayList<>();
-        empleados.add(new Empleado("Eimy", "Capcha", "73956514", "Admin", "eimy.c@clubdeportivo", "#####"));
-        empleados.add(new Empleado("Juan", "Castro", "74123456", "Usuario", "juan.c@clubdeportivo", "#####"));
-        empleados.add(new Empleado("María", "Pérez", "76234567", "Admin", "maria.p@clubdeportivo", "#####"));
-
-        EmpleadoAdapter adapter = new EmpleadoAdapter(empleados);
+        adapter = new UsuarioAdapter();
         recyclerView.setAdapter(adapter);
 
-        Button btnCanchas = findViewById(R.id.btn_canchas);
-        btnCanchas.setOnClickListener(new View.OnClickListener() {
+        obtenerUsuarios();
+
+        findViewById(R.id.btn_canchas).setOnClickListener(v -> startActivity(new Intent(this, InicioAdminActivity.class)));
+        findViewById(R.id.btn_empleados).setOnClickListener(v -> recreate());
+        findViewById(R.id.btn_ingresos).setOnClickListener(v -> startActivity(new Intent(this, IngresosActivity.class)));
+        findViewById(R.id.btn_adios).setOnClickListener(v -> startActivity(new Intent(this, LoginActivity.class)));
+    }
+
+    private void obtenerUsuarios() {
+        ApiService api = RetrofitClient.getInstance().create(ApiService.class);
+        api.obtenerUsuarios().enqueue(new Callback<List<Usuario>>() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AdminEmpleaActivity.this, InicioAdminActivity.class);
-                startActivity(intent);
+            public void onResponse(Call<List<Usuario>> call, Response<List<Usuario>> response) {
+                if (response.isSuccessful()) {
+                    adapter.setUsuarios(response.body());
+                } else {
+                    Toast.makeText(AdminEmpleaActivity.this, "Error al obtener usuarios", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Usuario>> call, Throwable t) {
+                Toast.makeText(AdminEmpleaActivity.this, "Fallo de conexión", Toast.LENGTH_SHORT).show();
             }
         });
-
-        Button btnEmplea = findViewById(R.id.btn_empleados);
-        btnEmplea.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AdminEmpleaActivity.this, AdminEmpleaActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button btnIngresos = findViewById(R.id.btn_ingresos);
-        btnIngresos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AdminEmpleaActivity.this, IngresosActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        ImageButton btnAdios = findViewById(R.id.btn_adios);
-        btnAdios.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AdminEmpleaActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
     }
 }

@@ -7,6 +7,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface ApiService {
 
@@ -21,4 +22,12 @@ public interface ApiService {
 
     @POST("registro-medico")
     Call<ResponseBody> guardarRegistroMedico(@Body RegistroMedico registroMedico);
+
+    @GET("usuarios")
+    Call<List<Usuario>> obtenerUsuarios();
+
+    @GET("usuarios")
+    Call<List<Usuario>> obtenerUsuariosPorRol(@Query("rol") String rol);
+
+
 }
