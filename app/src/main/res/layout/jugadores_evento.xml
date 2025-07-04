@@ -81,21 +81,14 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="12dp" />
 
+            <!-- Contenedor de campos de jugadores -->
             <LinearLayout
                 android:id="@+id/contenedorJugadores"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:hint="Jugador 1 - Nombre completo"
-                    android:background="@drawable/campo_texto_blanco"
-                    android:layout_marginBottom="8dp"
-                    android:paddingHorizontal="12dp"
-                    android:textColor="#000000" />
-
+                <!-- Repite los 11 campos de jugador -->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
@@ -103,37 +96,20 @@
                     android:background="@drawable/campo_texto_blanco"
                     android:layout_marginBottom="16dp"
                     android:paddingHorizontal="12dp"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:tag="dni1" />
 
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 2 - Nombre completo" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="8dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 2 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 3 - Nombre completo" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="8dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 3 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 4 - Nombre completo" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="8dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 4 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 5 - Nombre completo" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="8dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 5 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 6 - Nombre completo" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="8dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 6 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 7 - Nombre completo" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="8dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 7 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 8 - Nombre completo" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="8dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 8 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 9 - Nombre completo" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="8dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 9 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 10 - Nombre completo" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="8dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 10 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 11 - Nombre completo" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="8dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
-                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 11 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000"/>
+                <!-- Copia esto cambiando solo el número hasta llegar a 11 -->
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 2 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000" android:tag="dni2" />
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 3 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000" android:tag="dni3" />
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 4 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000" android:tag="dni4" />
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 5 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000" android:tag="dni5" />
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 6 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000" android:tag="dni6" />
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 7 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000" android:tag="dni7" />
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 8 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000" android:tag="dni8" />
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 9 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000" android:tag="dni9" />
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 10 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000" android:tag="dni10" />
+                <EditText android:layout_width="match_parent" android:layout_height="48dp" android:hint="Jugador 11 - DNI" android:background="@drawable/campo_texto_blanco" android:layout_marginBottom="16dp" android:paddingHorizontal="12dp" android:textColor="#000000" android:tag="dni11" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -143,6 +119,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp"
         android:paddingHorizontal="36dp"
         android:paddingVertical="14dp"
@@ -150,6 +127,5 @@
         android:background="@drawable/btn_siguiente_reservar"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:textAllCaps="true"
-        android:layout_alignParentBottom="true" />
+        android:textAllCaps="true" />
 </RelativeLayout>

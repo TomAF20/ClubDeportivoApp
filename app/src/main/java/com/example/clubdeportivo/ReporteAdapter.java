@@ -29,7 +29,12 @@ public class ReporteAdapter extends RecyclerView.Adapter<ReporteAdapter.ReporteV
         Reporte r = reportes.get(position);
         holder.tipo.setText("Tipo: " + r.getTipo());
         holder.estado.setText("Estado: " + r.getEstado());
+
+        holder.tipo.setTextColor(0xFFFFFFFF);
+        holder.estado.setTextColor(0xFF80CBC4);
+        holder.itemView.setBackgroundColor(0xFF1A1F1D);
     }
+
 
     @Override
     public int getItemCount() {

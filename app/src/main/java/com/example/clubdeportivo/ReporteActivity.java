@@ -7,9 +7,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.clubdeportivo.api.ApiService;
+import com.example.clubdeportivo.api.RetrofitClient;
+import com.example.clubdeportivo.model.Incidencia;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Response;
 
 public class ReporteActivity extends AppCompatActivity {
 
@@ -47,11 +54,36 @@ public class ReporteActivity extends AppCompatActivity {
         btnEnviar.setOnClickListener(v -> {
             String tipo = spinnerTipo.getSelectedItem().toString();
             String detalle = etDetalle.getText().toString().trim();
+
             if (!detalle.isEmpty()) {
-                listaReportes.add(new Reporte(tipo, detalle, "Pendiente"));
-                adapter.notifyItemInserted(listaReportes.size() - 1);
-                etDetalle.setText("");
-                Toast.makeText(this, "Reporte enviado", Toast.LENGTH_SHORT).show();
+                long idUsuario = getSharedPreferences("loginPrefs", MODE_PRIVATE).getLong("id", -1);
+                if (idUsuario == -1) {
+                    Toast.makeText(this, "No se encontró el usuario", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                Incidencia request = new Incidencia(idUsuario, tipo, detalle, "Alta");
+
+                ApiService api = RetrofitClient.getClient().create(ApiService.class);
+                api.enviarIncidencia(request).enqueue(new retrofit2.Callback<Void>() {
+                    @Override
+                    public void onResponse(Call<Void> call, Response<Void> response) {
+                        if (response.isSuccessful()) {
+                            listaReportes.add(new Reporte(tipo, detalle, "Pendiente"));
+                            adapter.notifyItemInserted(listaReportes.size() - 1);
+                            etDetalle.setText("");
+                            Toast.makeText(ReporteActivity.this, "Reporte enviado con éxito", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(ReporteActivity.this, "Error al enviar reporte", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Void> call, Throwable t) {
+                        Toast.makeText(ReporteActivity.this, "Fallo de red: " + t.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
+
             } else {
                 Toast.makeText(this, "Ingresa un detalle", Toast.LENGTH_SHORT).show();
             }

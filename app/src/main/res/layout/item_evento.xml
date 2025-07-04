@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_bg"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp">
+    <ImageView
+        android:id="@+id/imgEvento"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/evento1" />
+
+
+    <TextView
+        android:id="@+id/txtNombreEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Evento"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtFechas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lanzamiento: ..., Realización: ..."
+        android:textColor="#BBBBBB"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/txtOrganizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Organizado por: ..."
+        android:textColor="#88FFFFFF"
+        android:textSize="13sp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnVerMas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conoce más"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2CBFE0" />
+</LinearLayout>

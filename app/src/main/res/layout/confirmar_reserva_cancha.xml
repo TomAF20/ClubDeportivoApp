@@ -12,6 +12,7 @@
         android:padding="24dp">
 
         <LinearLayout
+            android:id="@+id/layoutRoot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -55,89 +56,25 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="INFORMACIÓN ADICIONAL"
-                android:textAllCaps="true"
-                android:textColor="#1DB954"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="Cuenta con movilidad"
-                android:textColor="#FFFFFF"
-                android:layout_marginBottom="16dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="COSTOS ADICIONALES (EQUIPO DEPORTIVO)"
                 android:textAllCaps="true"
                 android:textColor="#1DB954"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="Balón - S/. 11.00"
-                android:textColor="#FFFFFF" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="Guantes Arquero - S/. 9.00"
-                android:textColor="#FFFFFF" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="Petos - S/. 20.00"
-                android:textColor="#FFFFFF"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
+            <!-- contenedor dinámico -->
+            <LinearLayout
+                android:id="@+id/productosContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TOTAL: S/. 0.00"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
+                android:orientation="vertical"
                 android:layout_marginBottom="16dp" />
 
             <TextView
+                android:id="@+id/textTotal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MODALIDAD DE PAGO"
-                android:textAllCaps="true"
-                android:textColor="#1DB954"
-                android:textStyle="bold"
-                android:layout_marginBottom="4dp" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="Al contado"
-                android:textColor="#FFFFFF" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="Yape / Otro"
-                android:textColor="#FFFFFF"
-                android:layout_marginBottom="24dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TOTAL A PAGAR  S/. 22.00"
+                android:text="TOTAL A PAGAR: S/. 0.00"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
