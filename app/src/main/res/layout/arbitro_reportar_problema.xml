@@ -15,9 +15,13 @@
         android:layout_height="?attr/actionBarSize"
         android:background="#2D6A4F"
         app:title="Reportes"
+<<<<<<< HEAD
+        app:titleTextColor="#FFFFFF">
+=======
         app:titleTextColor="#FFFFFF"
         android:elevation="4dp">
 
+>>>>>>> origin/main
 
         <ImageButton
             android:id="@+id/btnCerrarSesion"
@@ -33,40 +37,73 @@
     <!-- INSERTAR CODIGO AQUI -->
     <ScrollView
         android:layout_width="match_parent"
+<<<<<<< HEAD
+        android:layout_height="0dp"
+=======
         android:layout_height="693dp"
+>>>>>>> origin/main
         android:layout_weight="1"
         android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+=======
             android:gravity="center_horizontal"
             android:orientation="vertical">
+>>>>>>> origin/main
 
             <!-- Título -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
+                android:text="Reportar un problema"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+=======
                 android:layout_marginBottom="8dp"
                 android:text="Reportar un problema"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
+>>>>>>> origin/main
 
             <!-- Spinner -->
             <Spinner
                 android:id="@+id/spinnerTipoIncidencia"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+<<<<<<< HEAD
+                android:entries="@array/tipos_incidencia"
+                android:background="@drawable/spinner_white_background"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="12dp" />
+=======
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/spinner_white_background"
                 android:entries="@array/tipos_incidencia"
                 android:paddingHorizontal="12dp" />
+>>>>>>> origin/main
 
             <!-- EditText multilinea -->
             <EditText
                 android:id="@+id/etReporte"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
+<<<<<<< HEAD
+                android:hint="Indicar reporte..."
+                android:background="@android:color/white"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="16dp" />
+=======
                 android:layout_marginBottom="16dp"
                 android:background="@android:color/white"
                 android:gravity="top"
@@ -75,12 +112,46 @@
                 android:padding="12dp"
                 android:textColor="#000000"
                 android:textColorHint="#888888" />
+>>>>>>> origin/main
 
             <!-- Botón reportar -->
             <Button
                 android:id="@+id/btnReportar"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
+<<<<<<< HEAD
+                android:text="Reportar"
+                android:backgroundTint="#004D4D"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="24dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Tabla de reportes -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="#FFFFFF"
+                android:padding="4dp">
+
+                <TableRow android:background="#CCCCCC">
+                    <TextView android:text="Reporte" android:padding="8dp" android:textStyle="bold"/>
+                    <TextView android:text="Tipo" android:padding="8dp" android:textStyle="bold"/>
+                    <TextView android:text="Estado" android:padding="8dp" android:textStyle="bold"/>
+                </TableRow>
+
+                <!-- Filas de ejemplo -->
+                <TableRow>
+                    <TextView android:text="Falta de agua" android:padding="8dp"/>
+                    <TextView android:text="Servicios" android:padding="8dp"/>
+                    <TextView android:text="Pendiente" android:padding="8dp"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView android:text="Sin árbitro" android:padding="8dp"/>
+                    <TextView android:text="Organización" android:padding="8dp"/>
+                    <TextView android:text="Resuelto" android:padding="8dp"/>
+=======
                 android:layout_marginBottom="24dp"
                 android:backgroundTint="#004D4D"
                 android:paddingHorizontal="24dp"
@@ -121,6 +192,7 @@
                         android:padding="8dp"
                         android:text="Eliminar"
                         android:textStyle="bold" />
+>>>>>>> origin/main
                 </TableRow>
 
             </TableLayout>
@@ -133,8 +205,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#081C15"
+<<<<<<< HEAD
+        app:menu="@menu/bottom_nav_menu_arbi"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled" />
+</LinearLayout>
+=======
         app:labelVisibilityMode="labeled"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:menu="@menu/bottom_nav_menu_arbi" />
 </LinearLayout>
+>>>>>>> origin/main

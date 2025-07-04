@@ -26,10 +26,6 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.chat);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Chats");
-        }
-
 
         recyclerView = findViewById(R.id.recyclerChats);
         etBuscar = findViewById(R.id.search_chat); // CORREGIDO

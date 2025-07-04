@@ -12,6 +12,9 @@
     <string name="icono_chat">💬</string>
     <string name="icono_usuario">👤</string>
     <string name="icono_reporte">📋</string>
+<<<<<<< HEAD
+    <string name="app_name">Club Deportivo</string>
+=======
     <string name="perfil">Perfil</string>
     <string name="inicio">Inicio</string>
     <string name="salir">Salir</string>
@@ -19,4 +22,5 @@
     <string name="adios" translatable="false">Cerrar sesión</string>
 
 
+>>>>>>> origin/main
 </resources>

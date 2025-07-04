@@ -2,9 +2,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B4332">
+    android:background="#0B0F0E">
 
-<LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -19,7 +19,6 @@
             android:src="@drawable/ic_arrow_back"
             app:tint="#FFFFFF"
             android:contentDescription="Volver atrás" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,94 +47,75 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tvNombreCancha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="CANCHA 1"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/imgCancha"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:layout_marginVertical="20dp"
             android:src="@drawable/cancha_1"
+            android:alpha="0.85"
             android:scaleType="centerCrop" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CARACTERÍSTICAS:"
-            android:textColor="#FFFFFF"
+            android:textColor="#1DB954"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="4dp" />
 
         <TextView
+            android:id="@+id/tvMedidas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="• Grass sintético\n• Medida: 18M x 28M"
-            android:textColor="#FFFFFF"
+            android:text=""
+            android:textColor="#CCCCCC"
             android:layout_marginBottom="16dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HORARIOS DISPONIBLES:"
-            android:textColor="#FFFFFF"
+            android:textColor="#1DB954"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
         <GridLayout
+            android:id="@+id/gridHorarios"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
             android:alignmentMode="alignMargins"
-            android:layout_marginBottom="24dp">
+            android:layout_marginBottom="24dp" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="6dp"
-                android:padding="12dp"
-                android:gravity="center"
-                android:background="@drawable/borde_blanco"
-                android:text="10:00 - 12:00"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_margin="6dp"
-                android:padding="12dp"
-                android:gravity="center"
-                android:background="@drawable/borde_blanco"
-                android:text="12:00 - 2:00"
-                android:textColor="#000000"
-                android:textStyle="bold" />
-
-        </GridLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ÁRBITRO ASIGNADO:"
-            android:textColor="#FFFFFF"
+            android:textColor="#1DB954"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="4dp" />
 
         <TextView
+            android:id="@+id/tvArbitro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:padding="14dp"
             android:background="@drawable/campo_texto_blanco"
-            android:text="Carlos Herrera"
+            android:text=""
             android:textColor="#000000"
             android:textSize="15sp" />
 
@@ -144,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/btn_iniciar_sesion"
+            android:background="@drawable/btn_siguiente_reservar"
             android:paddingHorizontal="36dp"
             android:paddingVertical="14dp"
             android:text="SIGUIENTE"

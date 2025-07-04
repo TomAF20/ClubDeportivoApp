@@ -1,5 +1,16 @@
 package com.example.clubdeportivo;
 
+<<<<<<< HEAD
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+=======
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,10 +18,17 @@ import android.widget.*;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+>>>>>>> origin/main
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+<<<<<<< HEAD
+public class ReportarProblemaActivity extends AppCompatActivity {
+
+    private Spinner spinner;
+    private Button btnReportar;
+=======
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ReportarProblemaActivity extends AppCompatActivity {
@@ -19,6 +37,7 @@ public class ReportarProblemaActivity extends AppCompatActivity {
     private EditText etReporte;
     private Button btnReportar;
     private TableLayout tableLayout;
+>>>>>>> origin/main
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +51,20 @@ public class ReportarProblemaActivity extends AppCompatActivity {
             return insets;
         });
 
+<<<<<<< HEAD
+        // 🔹 Referencias UI
+        spinner = findViewById(R.id.spinnerTipoIncidencia);
+        btnReportar = findViewById(R.id.btnReportar);
+
+        // 🔹 Cargar el Spinner con el array desde strings.xml
+=======
         spinner = findViewById(R.id.spinnerTipoIncidencia);
         etReporte = findViewById(R.id.etReporte);
         btnReportar = findViewById(R.id.btnReportar);
         tableLayout = findViewById(R.id.tableLayoutReportes); // ⚠️ ID que debes poner en XML
 
         // Adaptador del spinner
+>>>>>>> origin/main
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.tipos_incidencia,
@@ -46,6 +73,22 @@ public class ReportarProblemaActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
+<<<<<<< HEAD
+        // 🔹 Acción del botón
+        btnReportar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String seleccion = spinner.getSelectedItem().toString();
+
+                if (seleccion.equals("Seleccionar Tipo de Incidencia")) {
+                    Toast.makeText(ReportarProblemaActivity.this, "Por favor selecciona un tipo válido", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(ReportarProblemaActivity.this, "Reporte enviado: " + seleccion, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+=======
         btnReportar.setOnClickListener(view -> {
             String tipo = spinner.getSelectedItem().toString();
             String descripcion = etReporte.getText().toString().trim();
@@ -156,4 +199,5 @@ public class ReportarProblemaActivity extends AppCompatActivity {
 
 
 
+>>>>>>> origin/main
 }

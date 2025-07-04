@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
@@ -6,6 +10,19 @@
     android:orientation="vertical"
     android:background="#FFFFFF">
 
+<<<<<<< HEAD
+    <ScrollView
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+=======
     <!-- CONTENIDO PRINCIPAL SCROLLEABLE -->
     <ScrollView
         android:layout_width="match_parent"
@@ -19,6 +36,7 @@
             android:padding="16dp">
 
             <!-- TÍTULO -->
+>>>>>>> origin/main
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
@@ -30,7 +48,10 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="12dp" />
 
+<<<<<<< HEAD
+=======
             <!-- GRÁFICO -->
+>>>>>>> origin/main
             <com.example.clubdeportivo.BarChartView
                 android:id="@+id/barChartView"
                 android:layout_width="match_parent"
@@ -38,7 +59,10 @@
                 android:layout_margin="16dp"
                 android:background="#F9F9F9" />
 
+<<<<<<< HEAD
+=======
             <!-- LEYENDA -->
+>>>>>>> origin/main
             <TextView
                 android:id="@+id/tv_legend"
                 android:layout_width="wrap_content"
@@ -49,8 +73,12 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp" />
 
+<<<<<<< HEAD
+            <!-- CANCHA 1 -->
+=======
             <!-- CANCHAS 1 A 4 -->
             <!-- CARD: CANCHA 1 -->
+>>>>>>> origin/main
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,8 +98,13 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+<<<<<<< HEAD
+                        android:contentDescription="@string/icono_cancha"
+                        android:src="@android:drawable/ic_menu_gallery"
+=======
                         android:src="@android:drawable/ic_menu_gallery"
                         android:contentDescription="@string/icono_cancha"
+>>>>>>> origin/main
                         app:tint="#4B2C84" />
 
                     <TextView
@@ -87,8 +120,13 @@
                         android:id="@+id/counter_cancha1"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
+<<<<<<< HEAD
+                        android:background="@drawable/circle_counter"
+                        android:gravity="center"
+=======
                         android:gravity="center"
                         android:background="@drawable/circle_counter"
+>>>>>>> origin/main
                         android:text="5"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold" />
@@ -115,8 +153,13 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+<<<<<<< HEAD
+                        android:contentDescription="@string/icono_cancha"
+                        android:src="@android:drawable/ic_menu_gallery"
+=======
                         android:src="@android:drawable/ic_menu_gallery"
                         android:contentDescription="@string/icono_cancha"
+>>>>>>> origin/main
                         app:tint="#2196F3" />
 
                     <TextView
@@ -132,8 +175,13 @@
                         android:id="@+id/counter_cancha2"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
+<<<<<<< HEAD
+                        android:background="@drawable/circle_counter"
+                        android:gravity="center"
+=======
                         android:gravity="center"
                         android:background="@drawable/circle_counter"
+>>>>>>> origin/main
                         android:text="3"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold" />
@@ -160,8 +208,13 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+<<<<<<< HEAD
+                        android:contentDescription="@string/icono_cancha"
+                        android:src="@android:drawable/ic_menu_gallery"
+=======
                         android:src="@android:drawable/ic_menu_gallery"
                         android:contentDescription="@string/icono_cancha"
+>>>>>>> origin/main
                         app:tint="#FF5722" />
 
                     <TextView
@@ -177,8 +230,13 @@
                         android:id="@+id/counter_cancha3"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
+<<<<<<< HEAD
+                        android:background="@drawable/circle_counter"
+                        android:gravity="center"
+=======
                         android:gravity="center"
                         android:background="@drawable/circle_counter"
+>>>>>>> origin/main
                         android:text="7"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold" />
@@ -204,8 +262,13 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+<<<<<<< HEAD
+                        android:contentDescription="@string/icono_cancha"
+                        android:src="@android:drawable/ic_menu_gallery"
+=======
                         android:src="@android:drawable/ic_menu_gallery"
                         android:contentDescription="@string/icono_cancha"
+>>>>>>> origin/main
                         app:tint="#4CAF50" />
 
                     <TextView
@@ -221,8 +284,13 @@
                         android:id="@+id/counter_cancha4"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
+<<<<<<< HEAD
+                        android:background="@drawable/circle_counter"
+                        android:gravity="center"
+=======
                         android:gravity="center"
                         android:background="@drawable/circle_counter"
+>>>>>>> origin/main
                         android:text="2"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold" />
@@ -233,6 +301,15 @@
     </ScrollView>
 
     <!-- BARRA DE NAVEGACIÓN INFERIOR -->
+<<<<<<< HEAD
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#B0C4DE"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+=======
     <GridLayout
         android:id="@+id/barra_navegacion"
         android:layout_width="match_parent"
@@ -244,11 +321,18 @@
         android:elevation="4dp"
         android:alignmentMode="alignMargins"
         android:useDefaultMargins="true">
+>>>>>>> origin/main
 
         <Button
             android:id="@+id/btn_canchas"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+            android:layout_weight="1"
+            android:text="Canchas"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="#4B2C84" />
+=======
             android:layout_columnWeight="1"
             android:text="Canchas"
             android:textAllCaps="false"
@@ -257,11 +341,18 @@
             android:textStyle="bold"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="8dp" />
+>>>>>>> origin/main
 
         <Button
             android:id="@+id/btn_empleados"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+            android:layout_weight="1"
+            android:text="Empleados"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="#4B2C84" />
+=======
             android:layout_columnWeight="1"
             android:text="Empleados"
             android:textAllCaps="false"
@@ -282,11 +373,18 @@
             android:scaleType="centerInside"
             android:padding="10dp"
             app:tint="#4B2C84" />
+>>>>>>> origin/main
 
         <Button
             android:id="@+id/btn_ingresos"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+            android:layout_weight="1"
+            android:text="Ingresos"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="#4B2C84" />
+=======
             android:layout_columnWeight="1"
             android:text="Ingresos"
             android:textAllCaps="false"
@@ -295,11 +393,22 @@
             android:textStyle="bold"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="8dp" />
+>>>>>>> origin/main
 
         <Button
             android:id="@+id/btn_informes"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+            android:layout_weight="1"
+            android:text="Informes"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="#4B2C84" />
+
+    </LinearLayout>
+</LinearLayout>
+
+=======
             android:layout_columnWeight="1"
             android:text="Informes"
             android:textAllCaps="false"
@@ -312,3 +421,4 @@
 
     </GridLayout>
 </LinearLayout>
+>>>>>>> origin/main

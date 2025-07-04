@@ -9,6 +9,8 @@
         <item name="android:padding">12dp</item>
         <item name="android:textAllCaps">false</item>
     </style>
+<<<<<<< HEAD
+=======
 
     <style name="BarraBoton">
         <item name="android:layout_width">match_parent</item>
@@ -20,4 +22,5 @@
         <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
         <item name="android:padding">8dp</item>
     </style>
+>>>>>>> origin/main
 </resources>

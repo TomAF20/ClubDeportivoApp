@@ -4,15 +4,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B4332">
+    android:background="#0B0F0E">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2D6A4F"
-        android:title="Chat"
-        android:titleTextColor="#FFFFFF"
+        android:background="#1A1F1D"
+        app:title="Chat"
+        app:titleTextColor="#FFFFFF"
         android:elevation="4dp" />
 
     <EditText
