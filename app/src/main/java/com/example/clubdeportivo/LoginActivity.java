@@ -34,16 +34,41 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, CanchasActivity.class);
                     startActivity(intent);
                     finish();
+<<<<<<< HEAD
                 } else if (usuario.equals("eimy") && password.equals("789")) {
+=======
+                } else if (usuario.equals("eimy") && password.equals("1234")) {
+>>>>>>> origin/main
                     Intent intent = new Intent(LoginActivity.this, InicioAdminActivity.class);
                     startActivity(intent);
                     finish();
 
+<<<<<<< HEAD
                 } else if (usuario.equals("yair") && password.equals("456")) {
                     Intent intent = new Intent(LoginActivity.this, ArbitroActivity.class);
                     startActivity(intent);
                     finish();}
 
+=======
+
+                }else if (usuario.equals("yair") && password.equals("1234")) {
+                    Intent intent = new Intent(LoginActivity.this, ArbitroActivity.class);
+                    startActivity(intent);
+                    finish();
+
+
+                }else if (usuario.equals("doc") && password.equals("1234")) {
+                    Intent intent = new Intent(LoginActivity.this, RegistroMedicoActivity.class);
+                    startActivity(intent);
+                    finish();
+
+            } else if (usuario.equals("logistica") && password.equals("1234")) {
+                    Intent intent = new Intent(LoginActivity.this, InicioLogisticaActivity.class);
+                    startActivity(intent);
+                    finish();
+
+                }
+>>>>>>> origin/main
                 else {
                     Toast.makeText(LoginActivity.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
                 }

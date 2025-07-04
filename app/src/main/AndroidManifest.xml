@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools" >
 
     <application
+
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,6 +16,27 @@
         tools:targetApi="31" >
         <activity
             android:name=".RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilArbitroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportarProblemaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatArbitroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArbitroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PartidosAsignadosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetallesPartidoActivity"
             android:exported="false" />
         <activity
             android:name=".PerfilArbitroActivity"
@@ -76,6 +99,19 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
+<<<<<<< HEAD
+=======
+            android:name=".IngresosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminEmpleaActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+>>>>>>> origin/main
             android:name=".InicioActivity"
             android:exported="true" >
             <intent-filter>
@@ -93,6 +129,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".InicioAdminActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegistroMedicoActivity" />
+        <activity android:name=".ResumenRegistroActivity" />
+        <activity android:name=".PerfilMedActivity" />
+        <activity android:name=".InicioLogisticaActivity" />
+        <activity android:name=".ControlStockActivity" />
+        <activity android:name=".AgregarProductoActivity" />
+        <activity android:name=".BajaProductoActivity" />
+        <activity android:name=".ConfirmacionActivity" />
+        <activity android:name=".PerfiliActivity" />
+
+
+
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
 </manifest>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="13dp"
+        android:text="CONTROL DE EMPLEADOS"
+        android:textColor="#4B2C84"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!-- BÚSQUEDA -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="1">
+
+        <!-- Rectángulo de búsqueda -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_search_bar"
+            android:paddingHorizontal="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:hint="Buscar..."
+                android:background="@android:color/transparent"
+                android:padding="1dp"
+                android:singleLine="true"
+                android:imeOptions="actionSearch"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <!-- Botón Buscar -->
+        <Button
+            android:id="@+id/btn_buscar"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="48dp"
+            android:text="Buscar"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:background="@drawable/bg_button"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- RECYCLER VIEW -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- BARRA DE NAVEGACIÓN INFERIOR -->
+    <GridLayout
+        android:id="@+id/barra_navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#BDC4E9"
+        android:columnCount="5"
+        android:rowCount="1"
+        android:padding="4dp"
+        android:elevation="4dp"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/btn_canchas"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:text="Canchas"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btn_empleados"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:text="Empleados"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <ImageButton
+            android:id="@+id/btn_adios"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@drawable/bg_circle_button"
+            android:contentDescription="@string/adios"
+            android:scaleType="centerInside"
+            android:padding="10dp"
+            app:tint="#4B2C84" />
+
+        <Button
+            android:id="@+id/btn_ingresos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:text="Ingresos"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btn_informes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:text="Informes"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp" />
+    </GridLayout>
+
+</LinearLayout>

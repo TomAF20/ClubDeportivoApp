@@ -25,7 +25,7 @@ public class InicioActivity extends AppCompatActivity {
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InicioActivity.this, Registro.class);
+                Intent intent = new Intent(InicioActivity.this, RegistroMedico.class);
                 startActivity(intent);
             }
         });

@@ -17,8 +17,13 @@ public class ChatArbitroActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private EditText etBuscar;
+<<<<<<< HEAD
     private ChatListAdapter adapter;
     private List<ChatItem> listaChats;
+=======
+    private ChatArbitroListAdapter adapter;
+    private List<ChatItemArbitro> listaChats;
+>>>>>>> origin/main
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,7 @@ public class ChatArbitroActivity extends AppCompatActivity {
         }
 
 
+<<<<<<< HEAD
         recyclerView = findViewById(R.id.recyclerChats);
         etBuscar = findViewById(R.id.search_chat); // CORREGIDO
 
@@ -42,6 +48,19 @@ public class ChatArbitroActivity extends AppCompatActivity {
         adapter = new ChatListAdapter(listaChats, chatItem -> {
             Intent intent = new Intent(ChatArbitroActivity.this, ConversacionArbitroActivity.class);
             intent.putExtra("nombre", chatItem.getNombre());
+=======
+        recyclerView = findViewById(R.id.recyclerChatsArbitro);
+        etBuscar = findViewById(R.id.search_chat_arbitro); // CORREGIDO
+
+        listaChats = new ArrayList<>();
+        listaChats.add(new ChatItemArbitro("Carlos", "Hola, ¿cómo estás?"));
+        listaChats.add(new ChatItemArbitro("María", "Nos vemos mañana"));
+        listaChats.add(new ChatItemArbitro("IA Asistente", "Haz clic para chatear"));
+
+        adapter = new ChatArbitroListAdapter(listaChats, chatItemArbitro -> {
+            Intent intent = new Intent(ChatArbitroActivity.this, ConversacionArbitroActivity.class);
+            intent.putExtra("nombre", chatItemArbitro.getNombre());
+>>>>>>> origin/main
             startActivity(intent);
         });
 
@@ -57,12 +76,21 @@ public class ChatArbitroActivity extends AppCompatActivity {
         });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+<<<<<<< HEAD
         bottomNavigationView.setSelectedItemId(R.id.nav_partidos);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_chat_arbitro) {
                 startActivity(new Intent(this, ChatArbitroActivity.class));
+=======
+        bottomNavigationView.setSelectedItemId(R.id.nav_chat_arbitro);
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_partidos) {
+                startActivity(new Intent(this, ArbitroActivity.class));
+>>>>>>> origin/main
                 overridePendingTransition(0, 0);
                 finish();
                 return true;
@@ -82,7 +110,11 @@ public class ChatArbitroActivity extends AppCompatActivity {
                 finish();
                 return true;
             }
+<<<<<<< HEAD
             return id == R.id.nav_partidos;
+=======
+            return id == R.id.nav_chat_arbitro;
+>>>>>>> origin/main
         });
     }
 }

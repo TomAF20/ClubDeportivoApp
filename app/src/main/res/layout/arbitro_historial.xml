@@ -81,8 +81,13 @@
             </LinearLayout>
 
 
+<<<<<<< HEAD
             <!-- Tabla simulada -->
             <TableLayout
+=======
+            <TableLayout
+                android:id="@+id/tableLayoutPartidos"
+>>>>>>> origin/main
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:stretchColumns="*"
@@ -104,6 +109,7 @@
                         android:padding="8dp"
                         android:textStyle="bold" />
                 </TableRow>
+<<<<<<< HEAD
 
                 <!-- Filas de ejemplo -->
                 <TableRow>
@@ -119,6 +125,10 @@
                 </TableRow>
 
             </TableLayout>
+=======
+            </TableLayout>
+
+>>>>>>> origin/main
         </LinearLayout>
     </ScrollView>
 

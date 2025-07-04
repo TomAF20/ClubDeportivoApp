@@ -59,9 +59,21 @@ dependencies {
     debugImplementation libs.androidx.ui.test.manifest
     implementation 'com.google.zxing:core:3.5.2'
     implementation 'com.github.AnyChart:AnyChart-Android:1.1.5'
+<<<<<<< HEAD
     implementation 'com.google.android.material:material:1.11.0' // o la más reciente
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.cardview:cardview:1.0.0'
+=======
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.android.material:material:1.12.0'
+
+
+
+
+>>>>>>> origin/main
 
 
 }

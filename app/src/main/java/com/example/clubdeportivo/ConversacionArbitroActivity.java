@@ -35,7 +35,11 @@ public class ConversacionArbitroActivity extends AppCompatActivity {
         mensajes = new ArrayList<>();
         mensajes.add("Hola, bienvenido al chat con " + nombre);
 
+<<<<<<< HEAD
         RecyclerView recycler = findViewById(R.id.recyclerMensajes);
+=======
+        RecyclerView recycler = findViewById(R.id.recyclerMensajesArbitro);
+>>>>>>> origin/main
         recycler.setLayoutManager(new LinearLayoutManager(this));
         adapter = new MensajeAdapter(mensajes);
         recycler.setAdapter(adapter);

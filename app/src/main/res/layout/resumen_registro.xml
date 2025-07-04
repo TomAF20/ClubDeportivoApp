@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F4F6"
+    android:gravity="center_horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="0dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="0dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resumen del Registro"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#374151"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="16dp"
+                android:text="Nombre:"
+                android:textSize="16sp"
+                android:textColor="#111827"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="16dp"
+                android:text="Edad:"
+                android:textSize="16sp"
+                android:textColor="#111827"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvSintomas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="16dp"
+                android:text="Síntomas:"
+                android:textSize="16sp"
+                android:textColor="#111827"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvDiagnostico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="16dp"
+                android:text="Diagnóstico:"
+                android:textSize="16sp"
+                android:textColor="#111827"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvTratamiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_card"
+                android:padding="16dp"
+                android:text="Tratamiento:"
+                android:textSize="16sp"
+                android:textColor="#111827"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/barra_navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#BDC4E9"
+        android:gravity="center"
+        android:weightSum="3"
+        android:elevation="4dp">
+
+        <Button
+            android:id="@+id/btn_registros"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="REGISTRAR"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/btn_salir"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@drawable/bg_circle_button"
+            android:contentDescription="Salir"
+            android:scaleType="centerInside"
+            android:padding="18dp"
+            app:tint="#4B2C84" />
+
+        <Button
+            android:id="@+id/btn_enviar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="ENVIAR"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+</LinearLayout>

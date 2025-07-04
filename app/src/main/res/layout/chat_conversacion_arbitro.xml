@@ -14,7 +14,11 @@
         android:navigationIcon="@drawable/ic_arrow_back" /> <!-- ESTA LÍNEA AÑADIDA -->
 
     <androidx.recyclerview.widget.RecyclerView
+<<<<<<< HEAD
         android:id="@+id/recyclerMensajes"
+=======
+        android:id="@+id/recyclerMensajesArbitro"
+>>>>>>> origin/main
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -41,6 +45,10 @@
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_send"
             android:background="@android:color/transparent"
+<<<<<<< HEAD
             android:tint="#FFFFFF" />
+=======
+            android:tint="#FFFFFF"/>
+>>>>>>> origin/main
     </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F4F6"
+    android:gravity="center_horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="0dp"
+    android:paddingStart="0dp"
+    android:paddingEnd="0dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registro Médico"
+                android:textSize="26sp"
+                android:textColor="#374151"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <EditText
+                android:id="@+id/etNombrePaciente"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Nombre del paciente"
+                android:background="@drawable/rounded_edittext"
+                android:paddingHorizontal="16dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="12dp" />
+
+
+            <EditText
+                android:id="@+id/etEdad"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Edad"
+                android:background="@drawable/rounded_edittext"
+                android:paddingHorizontal="16dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:inputType="number"
+                android:layout_marginBottom="12dp" />
+
+
+            <EditText
+                android:id="@+id/etSintomas"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Síntomas"
+                android:background="@drawable/rounded_edittext"
+                android:padding="16dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:layout_marginBottom="12dp" />
+
+
+            <EditText
+                android:id="@+id/etDiagnostico"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Diagnóstico"
+                android:background="@drawable/rounded_edittext"
+                android:padding="16dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:inputType="text"
+                android:gravity="top"
+                android:layout_marginBottom="12dp" />
+
+
+            <EditText
+                android:id="@+id/etTratamiento"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Tratamiento"
+                android:background="@drawable/rounded_edittext"
+                android:padding="16dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:inputType="text"
+                android:gravity="top"
+                android:layout_marginBottom="20dp" />
+
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Guardar Registro"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:background="@drawable/bg_button"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/barra_navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#BDC4E9"
+        android:gravity="center"
+        android:weightSum="3"
+        android:elevation="4dp">
+
+        <Button
+            android:id="@+id/btn_perfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="PERFIL"
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/btn_salir"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@drawable/bg_circle_button"
+            android:contentDescription="Salir"
+            android:scaleType="centerInside"
+            android:padding="16dp"
+            app:tint="#4B2C84" />
+
+        <Button
+            android:id="@+id/btn_enviar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="#4B2C84"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+</LinearLayout>
