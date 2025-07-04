@@ -51,7 +51,12 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
 
-            }
+            } else if (usuario.equals("logistica") && password.equals("1234")) {
+                    Intent intent = new Intent(LoginActivity.this, InicioLogisticaActivity.class);
+                    startActivity(intent);
+                    finish();
+
+                }
                 else {
                     Toast.makeText(LoginActivity.this, "Usuario o contraseña incorrectos", Toast.LENGTH_SHORT).show();
                 }

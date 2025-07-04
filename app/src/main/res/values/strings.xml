@@ -12,6 +12,10 @@
     <string name="icono_chat">💬</string>
     <string name="icono_usuario">👤</string>
     <string name="icono_reporte">📋</string>
+    <string name="adios">aa\n</string>
+    <string name="perfil">Perfil</string>
+    <string name="inicio">Inicio</string>
+    <string name="salir">Salir</string>
 
     <string name="adios">Cerrar sesión</string>
 

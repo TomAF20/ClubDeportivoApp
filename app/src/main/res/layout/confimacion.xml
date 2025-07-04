@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8F5E9"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:id="@+id/contenido"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/ic_check_circle"
+            android:tint="#4CAF50"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvMensajeConfirmacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Producto guardado exitosamente"
+            android:textColor="#2E7D32"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver al Inicio"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_button"
+            android:padding="12dp" />
+    </LinearLayout>
+</RelativeLayout>

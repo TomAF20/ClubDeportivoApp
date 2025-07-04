@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -106,6 +108,18 @@
         <activity android:name=".RegistroMedicoActivity" />
         <activity android:name=".ResumenRegistroActivity" />
         <activity android:name=".PerfilMedActivity" />
+        <activity android:name=".InicioLogisticaActivity" />
+        <activity android:name=".ControlStockActivity" />
+        <activity android:name=".AgregarProductoActivity" />
+        <activity android:name=".BajaProductoActivity" />
+        <activity android:name=".ConfirmacionActivity" />
+        <activity android:name=".PerfiliActivity" />
+
+
+
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
 </manifest>
