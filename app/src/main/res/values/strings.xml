@@ -8,16 +8,15 @@
         <item>Otro</item>
     </string-array>
 
-    <string name="icono_cancha">🏟️</string>
-    <string name="icono_chat">💬</string>
-    <string name="icono_usuario">👤</string>
-    <string name="icono_reporte">📋</string>
-    <string name="adios">aa\n</string>
-    <string name="perfil">Perfil</string>
-    <string name="inicio">Inicio</string>
-    <string name="salir">Salir</string>
+    <string name="icono_cancha" translatable="false">🏟️</string>
+    <string name="icono_chat" translatable="false">💬</string>
+    <string name="icono_usuario" translatable="false">👤</string>
+    <string name="icono_reporte" translatable="false">📋</string>
+    <string name="perfil" translatable="false">Perfil</string>
+    <string name="inicio" translatable="false">Inicio</string>
+    <string name="salir" translatable="false">Salir</string>
 
-    <string name="adios">Cerrar sesión</string>
+    <string name="adios" translatable="false">Cerrar sesión</string>
 
 
 </resources>
