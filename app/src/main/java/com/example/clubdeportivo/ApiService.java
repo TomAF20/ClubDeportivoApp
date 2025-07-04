@@ -29,5 +29,8 @@ public interface ApiService {
     @GET("usuarios")
     Call<List<Usuario>> obtenerUsuariosPorRol(@Query("rol") String rol);
 
+    @GET("ingresos")
+    Call<List<Ingreso>> getIngresos();
+
 
 }

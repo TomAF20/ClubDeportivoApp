@@ -34,24 +34,23 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, CanchasActivity.class);
                     startActivity(intent);
                     finish();
+
                 } else if (usuario.equals("eimy") && password.equals("1234")) {
                     Intent intent = new Intent(LoginActivity.this, InicioAdminActivity.class);
                     startActivity(intent);
                     finish();
-
 
                 }else if (usuario.equals("yair") && password.equals("1234")) {
                     Intent intent = new Intent(LoginActivity.this, ArbitroActivity.class);
                     startActivity(intent);
                     finish();
 
-
                 }else if (usuario.equals("doc") && password.equals("1234")) {
                     Intent intent = new Intent(LoginActivity.this, RegistroMedicoActivity.class);
                     startActivity(intent);
                     finish();
 
-            } else if (usuario.equals("logistica") && password.equals("1234")) {
+                } else if (usuario.equals("logistica") && password.equals("1234")) {
                     Intent intent = new Intent(LoginActivity.this, InicioLogisticaActivity.class);
                     startActivity(intent);
                     finish();
