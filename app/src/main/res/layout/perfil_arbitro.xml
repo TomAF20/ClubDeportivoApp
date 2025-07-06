@@ -55,27 +55,6 @@
                 android:layout_marginBottom="16dp" />
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nombres" android:textColor="#FFFFFF"/>
-<<<<<<< HEAD
-            <EditText android:id="@+id/etNombres" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="Tom" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
-
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Apellido Paterno" android:textColor="#FFFFFF"/>
-            <EditText android:id="@+id/etApellidoPaterno" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="A" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
-
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Apellido Materno" android:textColor="#FFFFFF"/>
-            <EditText android:id="@+id/etApellidoMaterno" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="F" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
-
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Fecha de Nacimiento" android:textColor="#FFFFFF"/>
-            <EditText android:id="@+id/etFechaNacimiento" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="2000-01-01" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
-
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DNI" android:textColor="#FFFFFF"/>
-            <EditText android:id="@+id/etDni" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="77777777" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
-
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Celular" android:textColor="#FFFFFF"/>
-            <EditText android:id="@+id/etCelular" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="999999999" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
-
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Correo" android:textColor="#FFFFFF"/>
-            <EditText android:id="@+id/etCorreo" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="tom@peru.pe" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
-=======
             <EditText android:id="@+id/etNombres" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="Yair" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Apellido Paterno" android:textColor="#FFFFFF"/>
@@ -95,7 +74,6 @@
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Correo" android:textColor="#FFFFFF"/>
             <EditText android:id="@+id/etCorreo" android:layout_width="match_parent" android:layout_height="48dp" android:minHeight="48dp" android:enabled="false" android:text="yair@peru.pe" android:background="@drawable/campo_texto_blanco" android:padding="10dp"/>
->>>>>>> origin/main
 
             <Button
                 android:id="@+id/btnEditar"

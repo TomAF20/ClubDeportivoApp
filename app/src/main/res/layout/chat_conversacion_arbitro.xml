@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#1B4332"
     android:layout_width="match_parent"
@@ -11,14 +12,10 @@
         android:background="#2D6A4F"
         android:title="Contacto"
         android:titleTextColor="#FFFFFF"
-        android:navigationIcon="@drawable/ic_arrow_back" /> <!-- ESTA LÍNEA AÑADIDA -->
+        android:navigationIcon="@drawable/ic_arrow_back" />
 
     <androidx.recyclerview.widget.RecyclerView
-<<<<<<< HEAD
-        android:id="@+id/recyclerMensajes"
-=======
         android:id="@+id/recyclerMensajesArbitro"
->>>>>>> origin/main
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -37,7 +34,7 @@
             android:layout_height="wrap_content"
             android:hint="Escribe un mensaje..."
             android:background="@drawable/campo_texto_blanco"
-            android:padding="10dp"/>
+            android:padding="10dp" />
 
         <ImageButton
             android:id="@+id/btnEnviar"
@@ -45,10 +42,6 @@
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_send"
             android:background="@android:color/transparent"
-<<<<<<< HEAD
-            android:tint="#FFFFFF" />
-=======
-            android:tint="#FFFFFF"/>
->>>>>>> origin/main
+            app:tint="#FFFFFF" />
     </LinearLayout>
 </LinearLayout>

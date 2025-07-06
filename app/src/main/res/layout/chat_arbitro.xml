@@ -16,11 +16,7 @@
         android:elevation="4dp" />
 
     <EditText
-<<<<<<< HEAD
-        android:id="@+id/search_chat"
-=======
         android:id="@+id/search_chat_arbitro"
->>>>>>> origin/main
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_margin="8dp"
@@ -31,11 +27,7 @@
         android:textColorHint="#777777" />
 
     <androidx.recyclerview.widget.RecyclerView
-<<<<<<< HEAD
-        android:id="@+id/recyclerChats"
-=======
         android:id="@+id/recyclerChatsArbitro"
->>>>>>> origin/main
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

@@ -67,11 +67,7 @@ public class BarChartView extends View {
             float top = height - ((value / maxValue) * (height - padding * 2)) - padding;
             float bottom = height - padding;
 
-<<<<<<< HEAD
-            // Dibuja la barra con color 
-=======
-            // Dibuja la barra con color
->>>>>>> origin/main
+
             barPaint.setColor(colors[i]);
             canvas.drawRect(left, top, right, bottom, barPaint);
 

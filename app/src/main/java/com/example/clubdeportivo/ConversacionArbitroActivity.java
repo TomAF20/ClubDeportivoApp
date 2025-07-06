@@ -3,10 +3,12 @@ package com.example.clubdeportivo;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageButton;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,11 +37,8 @@ public class ConversacionArbitroActivity extends AppCompatActivity {
         mensajes = new ArrayList<>();
         mensajes.add("Hola, bienvenido al chat con " + nombre);
 
-<<<<<<< HEAD
-        RecyclerView recycler = findViewById(R.id.recyclerMensajes);
-=======
+        // Asegúrate que en tu XML usas ESTE ID:
         RecyclerView recycler = findViewById(R.id.recyclerMensajesArbitro);
->>>>>>> origin/main
         recycler.setLayoutManager(new LinearLayoutManager(this));
         adapter = new MensajeAdapter(mensajes);
         recycler.setAdapter(adapter);

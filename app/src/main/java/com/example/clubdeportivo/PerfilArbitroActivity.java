@@ -1,29 +1,5 @@
 package com.example.clubdeportivo;
 
-<<<<<<< HEAD
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-public class PerfilArbitroActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.perfil_arbitro);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-    }
-}
-=======
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -33,9 +9,11 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.*;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
@@ -103,38 +81,30 @@ public class PerfilArbitroActivity extends AppCompatActivity {
             alternarCampos(false);
             btnGuardar.setVisibility(View.GONE);
             btnEditar.setVisibility(View.VISIBLE);
-            generarQR(); // regenerar QR con los nuevos datos
+            generarQR(); // Regenerar QR con nuevos datos
         });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.nav_perfil_arbitro);
+
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_partidos) {
                 startActivity(new Intent(this, ArbitroActivity.class));
-                overridePendingTransition(0, 0);
-                finish();
-                return true;
             } else if (id == R.id.nav_chat_arbitro) {
                 startActivity(new Intent(this, ChatArbitroActivity.class));
-                overridePendingTransition(0, 0);
-                finish();
-                return true;
             } else if (id == R.id.nav_reportar_arbitro) {
                 startActivity(new Intent(this, ReportarProblemaActivity.class));
-                overridePendingTransition(0, 0);
-                finish();
-                return true;
             } else if (id == R.id.nav_historial_arbitro) {
                 startActivity(new Intent(this, HistorialActivity.class));
-                overridePendingTransition(0, 0);
-                finish();
-                return true;
-
-            }else if (id == R.id.nav_perfil_arbitro) {
-                return true;
+            } else if (id == R.id.nav_perfil_arbitro) {
+                return true; // Ya estamos aquí
+            } else {
+                return false;
             }
-            return false;
+            overridePendingTransition(0, 0);
+            finish();
+            return true;
         });
     }
 
@@ -182,4 +152,3 @@ public class PerfilArbitroActivity extends AppCompatActivity {
         }
     }
 }
->>>>>>> origin/main
